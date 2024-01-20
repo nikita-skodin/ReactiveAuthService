@@ -1,0 +1,49 @@
+server:
+  port: 8765
+
+enable:
+  link: http://localhost:${server.port}/api/auth/activate/
+
+eureka:
+  client:
+    enabled: false
+
+spring:
+  flyway:
+    url: jdbc:postgresql://localhost:5432/db
+    locations: classpath:db/migration
+    user: ${spring.r2dbc.username}
+    password: ${spring.r2dbc.password}
+  application:
+    name: AUTH
+  r2dbc:
+    username: nikita
+    password: nikita
+#    driverClassName: org.postgresql.Driver
+    url: r2dbc:postgresql://localhost:5432/db
+
+  security:
+    jwt:
+      secret: gSlrTZoP7iFZP6c1m9f6h1JwNP2X89+y0JHQ3EXo/hklG2euXqSMEbfpMqY0KaqH
+      #      24 hours * 1
+      access: 86400000
+      #      24 hours * 30
+      refresh: 2592000000
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: task.tracker.info1@gmail.com
+    password: xtyq tsbl ucyp rcsn
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
