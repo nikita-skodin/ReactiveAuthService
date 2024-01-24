@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.skodin</groupId>
-    <artifactId>ReactiveAuthService</artifactId>
+    <artifactId>auth-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ReactiveAuthService</name>
     <description>ReactiveAuthService</description>

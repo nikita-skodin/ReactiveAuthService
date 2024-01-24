@@ -1,6 +1,9 @@
 package com.skodin.reactiveauthservice.controllers;
 
-import com.skodin.reactiveauthservice.dtos.*;
+import com.skodin.reactiveauthservice.dtos.AuthenticationRequest;
+import com.skodin.reactiveauthservice.dtos.AuthenticationResponse;
+import com.skodin.reactiveauthservice.dtos.ErrorDTO;
+import com.skodin.reactiveauthservice.dtos.RegisterRequest;
 import com.skodin.reactiveauthservice.entities.UserEntity;
 import com.skodin.reactiveauthservice.enums.Role;
 import com.skodin.reactiveauthservice.exceptions.BadRequestException;
