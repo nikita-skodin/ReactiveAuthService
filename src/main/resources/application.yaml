@@ -10,7 +10,7 @@ eureka:
 
 spring:
   flyway:
-    url: jdbc:postgresql://localhost:5432/db
+    url: jdbc:postgresql://localhost:5432/db?currentSchema=users
     locations: classpath:db/migration
     user: ${spring.r2dbc.username}
     password: ${spring.r2dbc.password}
@@ -19,8 +19,7 @@ spring:
   r2dbc:
     username: nikita
     password: nikita
-#    driverClassName: org.postgresql.Driver
-    url: r2dbc:postgresql://localhost:5432/db
+    url: r2dbc:postgresql://localhost:5432/db?currentSchema=users
 
   security:
     jwt:

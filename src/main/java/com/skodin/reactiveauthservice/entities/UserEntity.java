@@ -16,7 +16,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Data
-@Table(name = "usr")
+@Table(name = "usr", schema = "users")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
